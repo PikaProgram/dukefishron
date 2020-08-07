@@ -6,6 +6,7 @@
   <a href="https://discord.gg/W4tE5yq"> <img alt="Discord invite" src="https://img.shields.io/discord/636946107053768704?logo=discord&label=discord&style=for-the-badge"/> </a>
   <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/PikaProgram/dukefishron?style=for-the-badge" />
   <img alt="GitHub" src="https://img.shields.io/github/license/PikaProgram/dukefishron?style=for-the-badge">
+  <a href="https://opensource.org/licenses/MIT"><img alt="MIT License" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
 </p>
 
 ---
