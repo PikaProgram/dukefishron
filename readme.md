@@ -14,6 +14,7 @@
 
 - [ ] Economy.
 - [ ] User Trading System.
+- [ ] Integrated GUI.
 - [ ] AFK Features.
 
 ---
