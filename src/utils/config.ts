@@ -11,7 +11,10 @@ export const prefix: string[] = [
   'dukefishron',
 ];
 
-export const owners: string[] = process.env.OWNER.split('_');
+export const owners: string[] =
+  process.env.OWNERS.split('_').length !== 1
+    ? process.env.OWNERS.split('_')
+    : Array.from(process.env.OWNERS);
 
 const loggerFormat = printf(({ level, message, label }) => {
   return `[${label}] ${level}: ${message}`;

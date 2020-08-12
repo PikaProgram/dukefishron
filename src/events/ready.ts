@@ -1,12 +1,14 @@
 import { logger } from '../utils/config';
 import DukeClient from '../utils/client';
+import { formatName } from '../utils/functions';
+import { BaseEvent } from '../handler/structure';
 
-module.exports = {
-  name: 'ready',
-  run: async (client: DukeClient) => {
-    logger.info(`${client.user.username} Is Online`);
-    logger.info(
-      `Serving ${client.guilds.cache.size} Guilds, ${client.channels.cache.size} Channels, & ${client.users.cache.size} Users`
-    );
-  },
-};
+export default class ReadyEvent extends BaseEvent {
+  constructor() {
+    super('ready');
+  }
+
+  async run(client: DukeClient): Promise<void> {
+    logger.info(`${formatName(client.user.username)} is online`);
+  }
+}

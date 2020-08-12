@@ -1,10 +1,10 @@
 import { Client, Collection, ClientOptions } from 'discord.js';
-import { props, event } from './types';
+import { BaseCommand, BaseEvent } from '../handler/structure';
 
 export default class DukeClient extends Client {
-  private _cmds = new Collection<string, props>();
+  private _cmds = new Collection<string, BaseCommand>();
 
-  private _events = new Collection<string, event>();
+  private _events = new Collection<string, BaseEvent>();
 
   private _prefix: string | string[] = [''];
 
@@ -14,11 +14,11 @@ export default class DukeClient extends Client {
     super(options);
   }
 
-  public get commands(): Collection<string, props> {
+  public get commands(): Collection<string, BaseCommand> {
     return this._cmds;
   }
 
-  public get event(): Collection<string, event> {
+  public get event(): Collection<string, BaseEvent> {
     return this._events;
   }
 
