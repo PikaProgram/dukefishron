@@ -30,29 +30,3 @@ export default class PingCommand extends BaseCommand {
     message.channel.send(client.ws.ping);
   }
 }
-
-/*
-module.exports = {
-  run: async (client: DukeClient, message: Message): Promise<void> => {
-    message.channel.send(client.ws.ping);
-  },
-  prop: {
-    name: 'ping',
-    desc: {
-      desc: '',
-      example: 'ping',
-      usage: 'ping',
-    },
-    aliases: ['p', 'pong', 'ponk'],
-    perm: {
-      userPerms: [],
-      botPerms: [],
-      ownerOnly: false,
-    },
-    limits: {
-      rateLimit: 3,
-      cooldown: 3 * 1000,
-    },
-  },
-};
-*/
